@@ -1,0 +1,617 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fc;
+    color: #12385c;
+}
+
+header {
+    width: 100%;
+    height: 85px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.logo img {
+    width: 180px;
+    height: 65px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #12385c;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #eebc28;
+}
+
+nav .activo {
+    background: #12385c;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 25px;
+}
+
+.portada {
+    width: 100%;
+    height: 390px;
+    background-image: url("Fiesta en el jardín con carpa y castillo inflable.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    position: relative;
+}
+
+.portada::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #061e35b8, transparent);
+}
+
+.portada-contenido {
+    position: relative;
+    color: white;
+    z-index: 1;
+}
+
+.portada h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.portada h1 span {
+    color: #ffcc27;
+}
+
+.portada p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+.boton {
+    display: inline-block;
+    background: #ffca28;
+    color: #12385c;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 13px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: white;
+    transform: scale(1.04);
+}
+
+.servicios {
+    padding: 35px 5%;
+    text-align: center;
+    background: #f3f6fc;
+}
+
+.servicios h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.servicios > p {
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 13px;
+}
+
+.producto {
+    background: white;
+    text-decoration: none;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px #0002;
+    transition: 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+}
+
+.producto h3 {
+    background: #12385c;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.domicilio {
+    background: #10385f;
+    color: white;
+    padding: 25px 9%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.icono-camion img {
+    width: 260px;
+    height: 240px;
+    object-fit: contain;
+}
+
+.domicilio-texto h2 {
+    font-size: 21px;
+    margin-bottom: 6px;
+}
+
+.domicilio-texto p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.domicilio .boton {
+    margin-left: auto;
+}
+
+.informacion {
+    padding: 40px 7%;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 35px;
+    background: white;
+    align-items: center;
+}
+
+.nosotros h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.nosotros > p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #35485d;
+}
+
+.caracteristicas {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+.caracteristicas div {
+    text-align: center;
+    flex: 1;
+}
+
+.caracteristicas span {
+    font-size: 30px;
+    color: #12385c;
+}
+
+.caracteristicas p {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.ubicacion {
+    background: #f0f4fa;
+    border-radius: 12px;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 15px;
+}
+
+.ubicacion h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.ubicacion p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.ubicacion iframe {
+    width: 100%;
+    height: 120px;
+    border: none;
+    border-radius: 6px;
+}
+
+.mapa {
+    display: inline-block;
+    background: #12385c;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 11px;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+.ubicacion-imagen img {
+    width: 100%;
+    height: 100%;
+    min-height: 230px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+footer {
+    background: #10385f;
+    color: white;
+    min-height: 105px;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-footer img {
+    width: 180px;
+    height: 65px;
+    object-fit: contain;
+}
+
+footer p {
+    font-size: 12px;
+
+
+    header {
+        padding: 0 4%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .productos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .informacion {
+        grid-template-columns: 1fr;
+    }
+
+
+
+    header {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .portada {
+        height: 330px;
+        background-position: center;
+        padding: 0 6%;
+    }
+
+    .portada h1 {
+        font-size: 29px;
+    }
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .producto img {
+        height: 110px;
+    }
+
+    .domicilio {
+        flex-wrap: wrap;
+        padding: 25px;
+    }
+
+    .domicilio .boton {
+        margin-left: 0;
+    }
+
+    .informacion {
+        padding: 30px 5%;
+    }
+
+    .caracteristicas {
+        flex-direction: row;
+    }
+
+    .ubicacion {
+        grid-template-columns: 1fr;
+    }
+
+    .ubicacion-imagen img {
+        height: 200px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+}
+
+/* Adaptación para celulares y tabletas */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 0 4%;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .portada h1 {
+        font-size: 32px;
+    }
+
+    .productos {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .producto img {
+        height: 100px;
+    }
+
+    .informacion {
+        grid-template-columns: 1fr 1.2fr;
+        gap: 15px;
+        padding: 30px 4%;
+    }
+
+    .ubicacion {
+        grid-template-columns: 1.2fr 0.8fr;
+    }
+
+    .domicilio {
+        padding: 20px 5%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: row;
+        height: 70px;
+        padding: 0 12px;
+    }
+
+    .logo img {
+        width: 110px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 9px;
+    }
+
+    nav .activo {
+        padding: 7px 10px;
+    }
+
+    .portada {
+        height: 250px;
+        padding: 0 5%;
+    }
+
+    .portada h1 {
+        font-size: 23px;
+    }
+
+    .portada p {
+        font-size: 11px;
+    }
+
+    .servicios {
+        padding: 25px 3%;
+    }
+
+    .servicios h2 {
+        font-size: 22px;
+    }
+
+    .productos {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 5px;
+    }
+
+    .producto img {
+        height: 65px;
+    }
+
+    .producto h3 {
+        font-size: 9px;
+        padding: 7px 2px;
+    }
+
+    .domicilio {
+        flex-wrap: nowrap;
+        gap: 10px;
+        padding: 15px 3%;
+    }
+
+    .icono-camion img {
+        width: 40px;
+    }
+
+    .domicilio-texto h2 {
+        font-size: 13px;
+    }
+
+    .domicilio-texto p {
+        font-size: 9px;
+    }
+
+    .domicilio .boton {
+        margin-left: auto;
+        padding: 9px;
+        font-size: 8px;
+    }
+
+    .informacion {
+        grid-template-columns: 1fr 1.2fr;
+        padding: 20px 3%;
+        gap: 10px;
+    }
+
+    .nosotros h2 {
+        font-size: 17px;
+    }
+
+    .nosotros > p {
+        font-size: 9px;
+    }
+
+    .caracteristicas span {
+        font-size: 20px;
+    }
+
+    .caracteristicas p {
+        font-size: 8px;
+    }
+
+    .ubicacion {
+        grid-template-columns: 1.2fr 0.8fr;
+        padding: 8px;
+        gap: 5px;
+    }
+
+    .ubicacion h3 {
+        font-size: 11px;
+    }
+
+    .ubicacion p {
+        font-size: 8px;
+    }
+
+    .ubicacion iframe {
+        height: 75px;
+    }
+
+    .ubicacion-imagen img {
+        min-height: 150px;
+    }
+
+    footer {
+        flex-direction: row;
+        padding: 10px 4%;
+    }
+
+    .logo-footer img {
+        width: 110px;
+    }
+
+    footer p {
+        font-size: 8px;
+    }
+
+}
+
+.mision-vision {
+  background-color: #0a2a5e; /* mismo azul de tu página */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.mision-vision h2 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.mision-vision-contenedor {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* para que en celular se ponga una abajo de otra */
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  width: 350px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.tarjeta span {
+  font-size: 40px;
+}
+
+.tarjeta h3 {
+  color: #0a2a5e;
+  margin: 10px 0;
+  font-size: 22px;
+}
+
+.tarjeta p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
