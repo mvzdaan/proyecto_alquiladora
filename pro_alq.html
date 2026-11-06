@@ -356,6 +356,78 @@ cite {
 }
 </style>
 
+<section class="contacto">
+  <h2>Formulario de Contacto</h2>
+  <form class="form-contacto">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+
+    <label for="correo">Correo Electrónico</label>
+    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje para el negocio" required></textarea>
+
+    <button type="submit">Enviar Mensaje</button>
+  </form>
+
+  <div class="whatsapp-contacto">
+    <p>O contáctanos directamente:</p>
+    <a href="https://wa.me/525548477233" target="_blank">
+      📱 +52 55 4847 7233
+    </a>
+  </div>
+</section>
+
+<style>
+.contacto {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 25px;
+  background: #ffffff;
+}
+.contacto h2 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 25px;
+}
+.form-contacto label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+.form-contacto input,
+.form-contacto textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.form-contacto button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size:16px;
+}
+.form-contacto button:hover {
+  background: #1d4ed8;
+}
+.whatsapp-contacto {
+  text-align:center;
+  margin-top:20px;
+}
+.whatsapp-contacto a {
+  color:#25D366;
+  font-weight:bold;
+  font-size:18px;
+}
+</style>
 
 
 
